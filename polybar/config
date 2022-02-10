@@ -1,0 +1,60 @@
+[colors]
+transparent = #0000ff00
+background = #FA1E24
+background-alt= #50d0c3
+foreground = #8D37FA
+
+
+[bar/test]
+
+width = 100%:-24
+height = 25
+offset-x = 12
+offset-y = 12
+radius = 0.0
+padding = 30
+fixed-center = true
+
+line-height = 4
+line-size = 3
+line-color = #ffffff
+
+background = ${colors.transparent}
+foreground = ${colors.foreground}
+
+font-0 = Fira Code Font:size=12:style:Bold;1
+
+modules-right = date
+modules-center = xxxwindow
+modules-left = bspwm
+
+[module/date]
+interval = 10 
+type = internal/date
+date = "%e. %B %A "
+time = "%I:%M"
+
+label = "%date%	%time%"
+label-foreground = ${colors.background-alt}
+label-background = ${colors.transparent}
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/xxxwindow]
+type = custom/script
+interval = 0
+exec = $HOME/.config/polybar/xxxwindow.sh 
+
+
+[module/bspwm]
+type = internal/bspwm
+
+label-focused-foreground = ${colors.background-alt}
+label-focused-padding = 1
+label-focused-underline = ${colors.background-alt}
+label-empty-background = ${colors.transparent}
+label-empty-padding = 1
+label-occupied-background = ${colors.transparent}
+label-occupied-padding = 1
