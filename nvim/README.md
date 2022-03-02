@@ -84,3 +84,29 @@ I want to configure shortcuts and usage of said extensions manually such that th
 ### What's bugging my about NVIM?
 
 - Exiting nvim to write commands to terminal requires manually writing and quitting each window AND THEN manually quitting NERDTree
+
+## Shortcuts
+
+Operators
+---
+| Key | Name | Description |
+| --- | --- | --- |
+| c | change | change selected block into whatever you type |
+| r | replace | replace character under cursor with succeeding character |
+| x | delete | delete character under cursor or selection made by motion |
+| i | insert | enter insert mode before cursor |
+| a | append | enter insert mode after cursor |
+| I | insert | enter insert mode before line |
+| A | append | enter insert mode after line |
+
+Motions
+---
+| Key | Name | Description |
+| --- | --- | --- |
+| w | word | moves cursor to beginning of next word |
+| b | back | moves cursor to beginning of current word |
+| e | end[word] | moves cursor to end of next word |
+| $ | end[line] | moves cursor to end of line |
+
+
+

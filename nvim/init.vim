@@ -38,12 +38,11 @@ set wildmode=longest,list
 set cc=80
 set clipboard=unnamedplus
 set cursorline
-set ttyfast
 set splitright
 set splitbelow
 
 syntax on
-filetype plugin on
+"filetype plugin on
 colorscheme dracula
 
 let mapleader = "æ" 
@@ -70,7 +69,7 @@ nnoremap <C-l> <C-w>l
 
 " Open nerdtree from any mode with ctrl-n
 nnoremap <C-n> :NERDTree<Return>
-inoremap <C-n> :NERDTree<Return>
+"inoremap <C-n> :NERDTree<Return>
 vnoremap <C-n> :NERDTree<Return>
 
 " Coc snippets
