@@ -17,9 +17,12 @@ call plug#begin("~/.vim/autoload")
     Plug 'pangloss/vim-javascript' " JS syntax highlighting and indentation
     Plug 'styled-components/vim-styled-components', {'branch': 'main'}
     Plug 'chrisbra/Colorizer' " CSS hex highlighting
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
     Plug 'aklt/plantuml-syntax'
-    Plug 'weirongxu/plantuml-previewer.vim'
-    Plug 'tyru/open-browser.vim' " dependency of plantuml-previewer
+    Plug 'skanehira/preview-uml.vim'
+        let g:preview_uml_url='http://localhost:8888'
+    "Plug 'weirongxu/plantuml-previewer.vim'
+    "Plug 'tyru/open-browser.vim' " dependency of plantuml-previewer
 call plug#end()
 
 " Set something

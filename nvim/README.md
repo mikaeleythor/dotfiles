@@ -108,5 +108,3 @@ Motions
 | e | end[word] | moves cursor to end of next word |
 | $ | end[line] | moves cursor to end of line |
 
-
-
