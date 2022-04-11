@@ -3,13 +3,15 @@ call plug#begin("~/.vim/autoload")
     Plug 'dracula/vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'} " Snippets from buffer and file system
     Plug 'ryanoasis/vim-devicons' " Nerd glyphs for nerdtree
-    Plug 'SirVer/ultisnips'
-        let g:UltiSnipsExpandTrigger="<Leader><Space>"
-        let g:UltiSnipsJumpForwardTrigger="<Leader><Tab>"
-        let g:UltiSnipsJumpBackwardTrigger="<Leader><S-Tab>"
+    "Plug 'SirVer/ultisnips'
+        "let g:UltiSnipsExpandTrigger="<Leader><Space>"
+        "let g:UltiSnipsJumpForwardTrigger="<Leader><Tab>"
+        "let g:UltiSnipsJumpBackwardTrigger="<Leader><S-Tab>"
     Plug 'honza/vim-snippets'
     Plug 'scrooloose/nerdtree' " Dirtree
     Plug 'lervag/vimtex' " Latex syntax highlighting and indent
+    Plug 'xuhdev/vim-latex-live-preview'
+        let g:livepreview_previewer = 'zathura'
     Plug 'tanvirtin/vgit.nvim'
     Plug 'preservim/nerdcommenter'
     "Plug 'mhinz/vim-startify' " Very ugly landing page
