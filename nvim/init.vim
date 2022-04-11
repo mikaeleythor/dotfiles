@@ -3,13 +3,15 @@ call plug#begin("~/.vim/autoload")
     Plug 'dracula/vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'} " Snippets from buffer and file system
     Plug 'ryanoasis/vim-devicons' " Nerd glyphs for nerdtree
-    Plug 'SirVer/ultisnips'
-        let g:UltiSnipsExpandTrigger="<Leader><Space>"
-        let g:UltiSnipsJumpForwardTrigger="<Leader><Tab>"
-        let g:UltiSnipsJumpBackwardTrigger="<Leader><S-Tab>"
+    "Plug 'SirVer/ultisnips'
+        "let g:UltiSnipsExpandTrigger="<Leader><Space>"
+        "let g:UltiSnipsJumpForwardTrigger="<Leader><Tab>"
+        "let g:UltiSnipsJumpBackwardTrigger="<Leader><S-Tab>"
     Plug 'honza/vim-snippets'
     Plug 'scrooloose/nerdtree' " Dirtree
     Plug 'lervag/vimtex' " Latex syntax highlighting and indent
+    Plug 'xuhdev/vim-latex-live-preview'
+        let g:livepreview_previewer = 'zathura'
     Plug 'tanvirtin/vgit.nvim'
     Plug 'preservim/nerdcommenter'
     "Plug 'mhinz/vim-startify' " Very ugly landing page
@@ -17,9 +19,12 @@ call plug#begin("~/.vim/autoload")
     Plug 'pangloss/vim-javascript' " JS syntax highlighting and indentation
     Plug 'styled-components/vim-styled-components', {'branch': 'main'}
     Plug 'chrisbra/Colorizer' " CSS hex highlighting
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
     Plug 'aklt/plantuml-syntax'
-    Plug 'weirongxu/plantuml-previewer.vim'
-    Plug 'tyru/open-browser.vim' " dependency of plantuml-previewer
+    Plug 'skanehira/preview-uml.vim'
+        let g:preview_uml_url='http://localhost:8888'
+    "Plug 'weirongxu/plantuml-previewer.vim'
+    "Plug 'tyru/open-browser.vim' " dependency of plantuml-previewer
 call plug#end()
 
 " Set something
@@ -38,12 +43,11 @@ set wildmode=longest,list
 set cc=80
 set clipboard=unnamedplus
 set cursorline
-set ttyfast
 set splitright
 set splitbelow
 
 syntax on
-filetype plugin on
+"filetype plugin on
 colorscheme dracula
 
 let mapleader = "æ" 
@@ -70,7 +74,7 @@ nnoremap <C-l> <C-w>l
 
 " Open nerdtree from any mode with ctrl-n
 nnoremap <C-n> :NERDTree<Return>
-inoremap <C-n> :NERDTree<Return>
+"inoremap <C-n> :NERDTree<Return>
 vnoremap <C-n> :NERDTree<Return>
 
 " Coc snippets
