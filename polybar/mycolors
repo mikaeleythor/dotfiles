@@ -1,9 +1,0 @@
-; Define color palette
-[color]
-background = #000000FF
-foreground = #FFFFFF
-black = #363432
-blue = #196774
-grey = #90A19D
-orange = #F0941F
-red = #EF6024

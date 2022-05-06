@@ -4,12 +4,17 @@ call plug#begin("~/.config/nvim/autoload")
 	Plug 'neoclide/coc.nvim', {'branch': 'release'} " Snippets from buffer and file system
     Plug 'honza/vim-snippets'			            " Imported snippets
 	Plug 'scrooloose/nerdtree'			            " Dirtree
-	Plug 'folke/tokyonight.nvim'		            " Colorscheme
+    Plug 'folke/tokyonight.nvim', {'branch': 'main'}		            " Colorscheme
+        let g:tokyonight_style='storm'
+        let g:tokyonight_italic_comments='true'
+        let g:tokyonight_italic_keywords='true'
+        let g:tokyonight_italic_functions='true'
+        let g:tokyonight_dark_sidebard='true'
 	Plug 'ryanoasis/vim-devicons'		            " Nerd glyphs for NERDTree
 	Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install' }
 	Plug 'preservim/nerdcommenter'
     Plug 'chrisbra/Colorizer'                       " CSS hex highlighting
-        let g:colorizer_auto_filetype='css,html,jsx'
+        let g:colorizer_auto_filetype='css,html,jsx,yml'
         let g:colorizer_skip_comments=1
     Plug 'xuhdev/vim-latex-live-preview'            " Live rendering
         let g:livepreview_previewer='zathura'
@@ -65,6 +70,10 @@ vnoremap <C-S-l> gt
 nnoremap <C-S-h> gT    
 inoremap <C-S-h> gT    
 vnoremap <C-S-h> gT    
+
+" Toggle Colorizer
+nnoremap <C-o>  :ColorToggle<Return>
+vnoremap <C-o>  :ColorToggle<Return>
 
 set autoindent              " Enable autoindent
 set cc=80                   " Highlight column no 80 for delimination

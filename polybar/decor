@@ -17,7 +17,7 @@ content = " "
 
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.altblack}
+content-foreground = ${color.secondary2}
 content-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -26,13 +26,13 @@ content-padding = 1
 type = custom/text
 content = "%{T3}%{T-}"
 content-background = ${color.background}
-content-foreground = ${color.altblack}
+content-foreground = ${color.secondary2}
 
 [module/RD]
 type = custom/text
 content = "%{T3}%{T-}"
 content-background = ${color.background}
-content-foreground = ${color.altblack}
+content-foreground = ${color.secondary2}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -41,14 +41,14 @@ type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.yellow}
+content-foreground = ${color.secondary1}
 
 [module/RRD]
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.red}
+content-foreground = ${color.secondary1}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -74,14 +74,14 @@ type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.cyan}
+content-foreground = ${color.secondary2}
 
 [module/CRD]
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.cyan}
+content-foreground = ${color.secondary2}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -91,14 +91,14 @@ type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.magenta}
+content-foreground = ${color.secondary1}
 
 [module/MRD]
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.magenta}
+content-foreground = ${color.secondary1}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -108,14 +108,14 @@ type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.yellow}
+content-foreground = ${color.secondary1}
 
 [module/YRD]
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.yellow}
+content-foreground = ${color.secondary1}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -125,14 +125,14 @@ type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.green}
+content-foreground = ${color.secondary2}
 
 [module/GRD]
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.green}
+content-foreground = ${color.secondary2}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -141,14 +141,14 @@ type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.red}
+content-foreground = ${color.secondary1}
 
 [module/BRD]
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
 content-background = ${color.background}
-content-foreground = ${color.red}
+content-foreground = ${color.secondary1}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -156,21 +156,21 @@ content-foreground = ${color.red}
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
-content-background = ${color.green}
-content-foreground = ${color.yellow}
+content-background = ${color.secondary2}
+content-foreground = ${color.secondary1}
 
 [module/CPL]
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
-content-background = ${color.yellow}
-content-foreground = ${color.cyan}
+content-background = ${color.secondary1}
+content-foreground = ${color.secondary2}
 
 [module/RPL]
 type = custom/text
 content = "%{T3}%{T-}"
 content-font = 3
-content-background = ${color.magenta}
-content-foreground = ${color.red}
+content-background = ${color.secondary1}
+content-foreground = ${color.secondary1}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
