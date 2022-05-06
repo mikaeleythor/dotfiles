@@ -10,6 +10,9 @@ super + alt + {q,r}
 super + Escape
 	pkill -USR1 -x sxhkd
 
+super + p
+    dm-tool lock
+
 ##############################
 ###### Monitor controls ######
 ##############################
