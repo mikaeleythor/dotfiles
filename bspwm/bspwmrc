@@ -9,18 +9,21 @@ if [[ "$( connected-DVI-monitors )" = DVI* ]]; then
 else
     echo null
 fi &&
-pgrep -x sxhkd > /dev/null || sxhkd &
-setxkbmap is &
-nitrogen --force-setter=xinerama --restore &
-albert &
-picom & 
-$HOME/.config/polybar/launch.sh
+pgrep -x sxhkd > /dev/null || sxhkd 
+setxkbmap is 
+nitrogen --force-setter=xinerama --restore 
+albert 
+picom 
 
 
-bspc monitor eDP1 -d I II III IV V VI VII VIII
-bspc config border_width         2
-bspc config window_gap          10
-bspc config focused_border_color "#CFFF9C"
-bspc config split_ratio          0.63
-bspc config borderless_monocle   true
-bspc config gapless_monocle      true
+bspc monitor eDP1 -d I II III IV V VI && \
+if [[ "$( connected-DVI-monitors )" = DVI* ]]; then
+    bspc monitor $( connected-DVI-monitors ) -d VII VIII IX X
+fi && $HOME/.config/polybar/launch.sh
+
+bspc config border_width            2
+bspc config window_gap              10
+bspc config top_padding             10
+bspc config focused_border_color    "#CFFF9C"
+bspc config split_ratio             0.63
+bspc config gapless_monocle         true

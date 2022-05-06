@@ -15,12 +15,12 @@ super + Escape
 ##############################
 
 # Focus on monitor in DIR {left, right} 
-super + tab + {h,l} 
+super + ctrl + {j,k} 
     bspc monitor -f {prev,next} 
 
 # Move focus and focused window to monitor in DIR {left,right}
-super + tab + shift {h,l}
-    id=$(bspc query --nodes --node); bspc node --to-monitor {prev,next}; bspc monitor --focus next; bspc node --focus ${id}
+super + ctrl + shift + {j,k}
+    id=$(bspc query --nodes --node); bspc node --to-monitor {prev,next}; bspc monitor --focus {prev,next}; bspc node --focus ${id}
 
 
 ##############################
@@ -29,11 +29,11 @@ super + tab + shift {h,l}
 
 # Focus on desktop in DIR {left,right}
 super + ctrl + {h,l}
-    bspc desktop -f {prev,next}
+    bspc desktop -f {prev,next}.local
 
 # Move focus and focused window to workspace in DIR {left, right}
 super + ctrl + shift + {h,l}
-    id=$(bspc query --nodes --node); bspc node --to-desktop {prev,next}; bspc desktop --focus next; bspc node --focus ${id};
+    id=$(bspc query --nodes --node); bspc node --to-desktop {prev,next}.local; bspc desktop --focus next.local; bspc node --focus ${id};
 
 #############################
 ###### Window controls ######
@@ -85,7 +85,7 @@ super + {_,shift + }w
 
 # Application launcher
 super + space
-    albert toggle; bspc node -f $( bspc query -N -n newest.floating ) 
+    DESKTOP=$(bspc query -D -d);albert toggle && bspc node -d $DESKTOP --follow
 
 # File explorer
 super + e
