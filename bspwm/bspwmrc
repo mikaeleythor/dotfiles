@@ -9,17 +9,16 @@ if [[ "$( connected-DVI-monitors )" = DVI* ]]; then
 else
     echo null
 fi &&
-pgrep -x sxhkd > /dev/null || sxhkd 
-setxkbmap is 
-nitrogen --force-setter=xinerama --restore 
-albert 
-picom 
+pgrep -x sxhkd > /dev/null || sxhkd &
+setxkbmap is &
+nitrogen --force-setter=xinerama --restore &
+albert &
+picom &
 
-
-bspc monitor eDP1 -d I II III IV V VI && \
+bspc monitor eDP1 -d I II III IV V VI &
 if [[ "$( connected-DVI-monitors )" = DVI* ]]; then
     bspc monitor $( connected-DVI-monitors ) -d VII VIII IX X
-fi && $HOME/.config/polybar/launch.sh
+fi & $HOME/.config/polybar/launch.sh
 
 bspc config border_width            2
 bspc config window_gap              10

@@ -59,8 +59,12 @@ super + m
     bspc desktop -l next
 
 # Focus {prev,next} window in desktop [monocle]
-#super + alt + {tab,shift + tab}
-    #bspc node -f {next,prev}.local.!hidden.window
+ctrl + shift + alt + {h,l}
+    bspc node -f {next,prev}.local.!hidden.window
+
+# Move floated window
+ctrl + alt + {h,j,k,l}
+    bspc node -v {-10 0,0 10,0 -10,10 0}
 
 # Expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
@@ -88,7 +92,7 @@ super + {_,shift + }w
 
 # Application launcher
 super + space
-    DESKTOP=$(bspc query -D -d);albert toggle && bspc node -d $DESKTOP --follow
+    DESKTOP=$(bspc query -M -m);albert toggle && bspc node -m $DESKTOP --follow
 
 # File explorer
 super + e
