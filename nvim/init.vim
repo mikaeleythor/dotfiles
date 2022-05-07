@@ -1,22 +1,23 @@
 " Install plugins
 
 call plug#begin("~/.config/nvim/autoload")
-	Plug 'neoclide/coc.nvim', {'branch': 'release'} " Snippets from buffer and file system
-    Plug 'honza/vim-snippets'			            " Imported snippets
-	Plug 'scrooloose/nerdtree'			            " Dirtree
-    Plug 'folke/tokyonight.nvim', {'branch': 'main'}		            " Colorscheme
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}     " Snippets from buffer and file system
+    Plug 'honza/vim-snippets'			                " Imported snippets
+	Plug 'scrooloose/nerdtree'			                " Dirtree
+    Plug 'nvim-lualine/lualine.nvim'                    " Statusline
+    Plug 'folke/tokyonight.nvim', {'branch': 'main'}    " Colorscheme
         let g:tokyonight_style='storm'
         let g:tokyonight_italic_comments='true'
         let g:tokyonight_italic_keywords='true'
         let g:tokyonight_italic_functions='true'
         let g:tokyonight_dark_sidebard='true'
-	Plug 'ryanoasis/vim-devicons'		            " Nerd glyphs for NERDTree
+	Plug 'ryanoasis/vim-devicons'		                " Nerd glyphs for NERDTree
 	Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app && yarn install' }
 	Plug 'preservim/nerdcommenter'
-    Plug 'chrisbra/Colorizer'                       " CSS hex highlighting
+    Plug 'chrisbra/Colorizer'                           " CSS hex highlighting
         let g:colorizer_auto_filetype='css,html,jsx,yml'
         let g:colorizer_skip_comments=1
-    Plug 'xuhdev/vim-latex-live-preview'            " Live rendering
+    Plug 'xuhdev/vim-latex-live-preview'                " Live rendering
         let g:livepreview_previewer='zathura'
 
 call plug#end()
@@ -95,3 +96,35 @@ set softtabstop=4			" Set tabs to 4 spaces
 
 syntax on
 colorscheme tokyonight
+
+lua << END
+require('lualine').setup {
+  options = {
+    icons_enabled = true,
+    theme = 'auto',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {},
+    always_divide_middle = true,
+    globalstatus = false,
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
+}
+END

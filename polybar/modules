@@ -188,20 +188,35 @@ label = "%{A1:terminal -e gtop &:}%percentage%% %{A}"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
+[module/date]
+type = internal/date
+interval = 1
+format-margin = 0
+
+date = "%A, %b %e"
+
+format-prefix-foreground = ${color.primary}
+format-prefix-background = ${color.secondary2}
+
+label = %date%
+label-foreground = ${color.primary}
+label-background = ${color.secondary2}
+label-padding = 1
+
 [module/time]
 type = internal/date
 interval = 1
 format-margin = 0
-time = "%I:%M:%S %p"
-time-alt = "%A, %m/%d/%y"
+
+time = "%k:%M:%S"
 
 format-prefix = " "
 format-prefix-foreground = ${color.primary}
-format-prefix-background = ${color.secondary2}
+format-prefix-background = ${color.secondary1}
 
 label = %time%
 label-foreground = ${color.primary}
-label-background = ${color.secondary2}
+label-background = ${color.secondary1}
 label-padding = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

@@ -95,7 +95,7 @@ font-4 = "Iosevka Nerd Font Mono:style=Bold:size=10;3"
 # Default
 modules-left = spacing BLD launcher BRD dot GLD cpu YPL memory CPL filesystem CRD dot MLD network MRD
 modules-center = LD bspwm RD
-modules-right = RLD battery RRD dot GLD volume YPL backlight YRD dot LD time RD spacing
+modules-right = RLD battery RRD dot GLD volume YPL backlight YRD dot LD date RD dot RLD time RRD spacing
 
 spacing = 0
 dim-value = 1.0
