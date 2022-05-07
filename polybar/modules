@@ -8,7 +8,7 @@ type = internal/xbacklight
 card = intel_backlight
 
 format = <ramp> <label>
-format-background = ${color.secondary1}
+format-background = ${color.secondary2}
 
 label = %percentage%%
 label-foreground = ${color.primary}
@@ -72,13 +72,13 @@ format-muted = <label-muted>
 format-muted-prefix = " "
 format-muted-prefix-font = 2
 format-muted-prefix-foreground = ${color.primary}
-format-muted-prefix-background = ${color.secondary2}
+format-muted-prefix-background = ${color.secondary1}
 
 label-volume = "%percentage%% "
 label-muted = "Mute"
 
-label-volume-background = ${color.secondary2}
-label-muted-background = ${color.secondary2}
+label-volume-background = ${color.secondary1}
+label-muted-background = ${color.secondary1}
 
 label-volume-foreground = ${color.primary}
 label-muted-foreground = ${color.primary}
@@ -195,6 +195,7 @@ format-margin = 0
 
 date = "%A, %b %e"
 
+format-prefix = 
 format-prefix-foreground = ${color.primary}
 format-prefix-background = ${color.secondary2}
 
