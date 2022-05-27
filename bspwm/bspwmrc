@@ -2,24 +2,29 @@
 
 # Run monitor script here
 if [[ "$( connected-DVI-monitors )" = DVI* ]]; then
-    sleep 3 && init-DL-monitor &&  
+    ( init-DL-monitor && sleep 5 && nitrogen --force-setter=xinerama --restore ) &
     if [[ $( xsetwacom list devices ) ]]; then
         init-wacom
     fi
-else
-    echo null
-fi &&
+fi &
 pgrep -x sxhkd > /dev/null || sxhkd &
 setxkbmap is &
 nitrogen --force-setter=xinerama --restore &
 albert &
 picom &
 
+if [[ "$( pidof redshift )" = "" ]]; then
+    /usr/lib/geoclue-2.0/demos/agent &
+    redshift &
+fi &
+
 bspc monitor eDP1 -d I II III IV V VI &
 if [[ "$( connected-DVI-monitors )" = DVI* ]]; then
-    bspc monitor $( connected-DVI-monitors ) -d VII VIII IX X
+    ( bspc monitor $( connected-DVI-monitors ) -d VII VIII IX X && \
+        nitrogen --force-setter=xinerama --restore )
 fi & $HOME/.config/polybar/launch.sh
 
+bspc rule -a albert focus=on
 bspc config border_width            2
 bspc config window_gap              10
 bspc config top_padding             10

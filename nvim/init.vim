@@ -5,6 +5,7 @@ call plug#begin("~/.config/nvim/autoload")
     Plug 'honza/vim-snippets'			                " Imported snippets
 	Plug 'scrooloose/nerdtree'			                " Dirtree
     Plug 'nvim-lualine/lualine.nvim'                    " Statusline
+    "Plug 'Mofiqul/dracula.nvim'
     Plug 'folke/tokyonight.nvim', {'branch': 'main'}    " Colorscheme
         let g:tokyonight_style='storm'
         let g:tokyonight_italic_comments='true'

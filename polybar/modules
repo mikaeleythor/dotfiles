@@ -95,7 +95,7 @@ ramp-volume-8 = " "
 ramp-volume-9 = " "
 ramp-volume-font = 2
 ramp-volume-foreground = ${color.primary}
-ramp-volume-background = ${color.secondary2}
+ramp-volume-background = ${color.secondary1}
 
 ramp-headphones-0 = 
 ramp-headphones-1 = 
